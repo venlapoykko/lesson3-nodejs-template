@@ -18,7 +18,7 @@ const ChatForm = (props) => {
         </Form.Field>
 
         <Form.TextArea name="summary" value={summary} onChange={event => handleInputChange(event.target)} label="Message" placeholder="Write your message" rows="6" />
-        <Button primary labelPosition='left' icon='edit' onClick={createChat}>Add comment</Button>
+        <Button primary onClick={createChat}>Add comment</Button>
       </Form>
     </div>
   );

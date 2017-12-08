@@ -10,7 +10,7 @@ This is the repository for a simple chat application using koa, react and socket
 ## Docker
 
     docker-compose build
-    docker-compose up
+    ENDPOINT=http://0.0.0.0:9000 docker-compose up
 
 ## Exercises
 

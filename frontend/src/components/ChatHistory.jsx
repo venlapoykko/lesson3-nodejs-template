@@ -32,7 +32,7 @@ class ChatHistory extends Component {
     if (history && history.length > 0) {
       return (
         <Comment.Group className="history">
-          <Header as="h3">Chat history</Header>
+          <Header as="h3" dividing>Chat history</Header>
 
           { history.map(chat => this.chatItem(chat)) }
         </Comment.Group>

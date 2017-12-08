@@ -82,7 +82,7 @@ class ChatPage extends Component {
     return (
       <div className="ui grid">
         <div className="column">
-          <Header as="h1" textAlign="center">Chat</Header>
+          <Header as="h1" textAlign="center">socket.io chat example</Header>
 
           <ChatHistory history={history} handlers={{ getChats: this.getChats }} />
 

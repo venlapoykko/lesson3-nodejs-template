@@ -8,8 +8,8 @@ const ChatForm = (props) => {
   } = props;
 
   return (
-    <div className="form">
-      <Header as="h3">Write to chat</Header>
+    <div className="chatform">
+      <Header as="h3" dividing>Write to chat</Header>
 
       <Form loading={loading}>
         <Form.Field>

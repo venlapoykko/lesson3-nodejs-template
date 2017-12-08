@@ -14,9 +14,11 @@ This is the repository for a simple chat application using koa, react and socket
 
 ## Exercises
 
-* Add animations to new chat messages
+* Add animations to new chat messages.
 
-* Let others know when someone is typing a message
+* Make command-enter post a message.
 
-* Add functionality for different rooms
+* Let others know when someone is typing a message.
+
+* Add functionality for different rooms.
 

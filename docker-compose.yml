@@ -12,7 +12,9 @@ services:
 
   backend:
     build: backend
-    command: npm run dev
+    command: ./wait-for db:5432 -- npm run dev
+    environment:
+      DATABASE_URL: postgres://chat:chat@db/chat
     volumes:
       - ./backend/src:/usr/src/app/src
     ports:

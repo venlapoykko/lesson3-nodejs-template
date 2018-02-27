@@ -1,18 +1,10 @@
 var Sequelize = require('sequelize');
 var config = require('../config');
 
-var sequelize = new Sequelize(config.DATABASE_URL, {
+var sequelize = new Sequelize({
   logging: false,
+  dialect: 'sqlite',
+  storage: './db/chat.sqlite'
 });
-
-/* TO ENABLE SSL
-var sequelize = new Sequelize(config.DATABASE_URL, {
-  logging: false,
-  dialect: 'postgres',
-  dialectOptions: {
-    ssl: true
-  }
-});
-*/
 
 module.exports = sequelize;

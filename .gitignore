@@ -36,3 +36,7 @@ uploads
 
 # Apidoc
 backend/doc
+
+# Sqlite
+*.sqlite
+*.sqlite3

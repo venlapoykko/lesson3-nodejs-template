@@ -26,9 +26,9 @@
     "koa-bodyparser": "^4.2.0",
     "koa-logger": "^3.1.0",
     "koa-router": "^7.1.1",
-    "pg": "^6.1.5",
     "sequelize": "^3.30.4",
     "sequelize-cli": "^2.7.0",
+    "sqlite3": "^3.1.13",
     "uglify-js": "^3.2.2"
   },
   "devDependencies": {

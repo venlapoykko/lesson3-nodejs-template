@@ -20,14 +20,5 @@ services:
     ports:
       - 9000:9000
 
-  dev:
-    build: frontend
-    environment:
-      ENDPOINT: ${ENDPOINT}
-    volumes:
-      - ./frontend/src:/usr/src/app/src
-    ports:
-      - 8000:8000
-
 volumes:
   dbdata:

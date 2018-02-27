@@ -1,24 +1,17 @@
 {
   "name": "chat-backend",
   "version": "0.0.1",
-  "description": "Socket.io Chat Backend",
+  "description": "Koodi101 chat",
   "author": "Marko Klemetti <marko.klemetti@gmail.com>",
   "license": "UNLICENSED",
   "private": true,
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/mrako/socket-chat.git"
-  },
   "engines": {
     "node": ">=7"
   },
   "main": "server.js",
   "scripts": {
     "dev": "LOGGING=true ./node_modules/.bin/nodemon server.js",
-    "test": "DATABASE_URL=${DATABASE_URL:-postgres://chat:chat@localhost/chat_test} ./node_modules/mocha/bin/mocha --no-warnings",
-    "test:xunit": "DATABASE_URL=${DATABASE_URL:-postgres://chat:chat@localhost/chat_test} ./node_modules/mocha/bin/mocha -R xunit > ${OUTPUT:-test-results.xml}",
-    "start": "node server.js",
-    "lint": "./node_modules/.bin/gulp jshint"
+    "start": "node server.js"
   },
   "dependencies": {
     "kcors": "^2.2.1",

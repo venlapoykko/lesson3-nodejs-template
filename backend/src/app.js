@@ -4,8 +4,6 @@ const bodyParser = require('koa-bodyparser');
 const logger = require('koa-logger');
 const cors = require('kcors');
 
-const config = require('./config');
-
 const chats = require('./controllers/chats');
 
 const app = module.exports = new Koa();

@@ -1,5 +1,4 @@
 var Sequelize = require('sequelize');
-var config = require('../config');
 
 var sequelize = new Sequelize({
   logging: false,

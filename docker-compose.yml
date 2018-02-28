@@ -6,9 +6,6 @@ services:
     command: npm run dev
     volumes:
       - ./backend/src:/usr/src/app/src
-      - dbdata:/usr/src/app/db
+      - ./backend/db:/usr/src/app/db
     ports:
       - 9000:9000
-
-volumes:
-  dbdata:

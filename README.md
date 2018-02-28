@@ -1,4 +1,4 @@
-# Socket Chat
+# Koodi101 chat example
 
 This is the repository for a simple chat application using
 [koa](http://koajs.com/) and [sequelize](http://docs.sequelizejs.com/)

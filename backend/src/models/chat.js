@@ -1,7 +1,7 @@
 var Sequelize = require('sequelize');
 var sequelize = require('./sequelize');
 
-var Report = sequelize.define('chats', {
+var ChatMessage = sequelize.define('chats', {
   message: Sequelize.TEXT,
 }, {
   timestamps: true,
@@ -18,4 +18,4 @@ var Report = sequelize.define('chats', {
   },
 });
 
-module.exports = Report;
+module.exports = ChatMessage;

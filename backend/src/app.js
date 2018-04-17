@@ -6,8 +6,7 @@ const cors = require('kcors');
 
 const database = require('./database');
 
-
-/***** CREATE AND CONF THE WEB SERVER *****/
+/** CREATE AND CONF THE WEB SERVER **/
 
 const app = module.exports = new Koa();
 
@@ -16,8 +15,7 @@ app.use(logger());
 app.use(cors({ credentials: true }));
 app.use(bodyParser());
 
-
-/***** METHODS TO RESPOND TO THE ROUTES *****/
+/** METHODS TO RESPOND TO THE ROUTES **/
 
 const listChats = async (ctx) => {
   let options = {};
@@ -41,8 +39,7 @@ const createChat = async (ctx) => {
   ctx.status = 201;
 };
 
-
-/***** CONFIGURING THE API ROUTES *****/
+/** CONFIGURING THE API ROUTES **/
 
 const publicRouter = new Router({ prefix: '/api' });
 

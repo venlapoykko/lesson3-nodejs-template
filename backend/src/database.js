@@ -1,6 +1,6 @@
 var Sequelize = require('sequelize');
 
-/***** INIT DATABASE *****/
+/** INIT DATABASE **/
 
 const sequelize = new Sequelize({
   logging: false,
@@ -8,7 +8,7 @@ const sequelize = new Sequelize({
   storage: './db/chat.sqlite',
 });
 
-/***** INIT CHAT TABLE WITH MESSAGE *****/
+/** INIT CHAT TABLE WITH MESSAGE **/
 
 const Chat = sequelize.define('chats', {
   message: Sequelize.TEXT,
@@ -28,7 +28,7 @@ const Chat = sequelize.define('chats', {
   },
 });
 
-/***** EXPORT CHAT OBJECT *****/
+/** EXPORT CHAT OBJECT **/
 
 exports.sync = (options) => {
   return sequelize.sync(options);

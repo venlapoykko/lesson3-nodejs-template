@@ -11,7 +11,8 @@
   "main": "server.js",
   "scripts": {
     "dev": "LOGGING=true ./node_modules/.bin/nodemon server.js",
-    "start": "node server.js"
+    "start": "node server.js",
+    "lint": "./node_modules/.bin/eslint --ext .js db scripts src test"
   },
   "dependencies": {
     "kcors": "^2.2.1",

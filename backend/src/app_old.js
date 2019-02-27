@@ -27,25 +27,13 @@ const listChats = async (ctx) => {
     results: chats,
   };
 
-const listChatsByRoom = async (ctx) => {
-    let room = ctx.params.room;
-    let options = {};
-  
-    let result = await database.Chat.findAll(options);
-    let chats = await Promise.all(result.map(chat => chat.toJSON()));
-  
-    let response = {
-      results: chats,
-  };
-
   ctx.body = response;
 };
 
 const createChat = async (ctx) => {
   const params = ctx.request.body;
-  let room = ctx.params.room;
 
-  const chat = await database.Chat.create({message: params.message, room: room,});
+  const chat = await database.Chat.create({message: params.message});
 
   ctx.body = await chat.toJSON();
   ctx.status = 201;
@@ -56,9 +44,7 @@ const createChat = async (ctx) => {
 const publicRouter = new Router({ prefix: '/api' });
 
 publicRouter.get('/chats', listChats);
-//GET /api/chats/olohuone  => room = olohuone
-publicRouter.get('/chats/:room', listChatsByRoom);
-publicRouter.post('/chats/:room', createChat);
+publicRouter.post('/chats', createChat);
 
 app.use(publicRouter.routes());
 app.use(publicRouter.allowedMethods());
